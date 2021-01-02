@@ -11,7 +11,6 @@ export default () => {
             <BrowserRouter>
                 <Route exact path="/pricing" component={Pricing} />
                 <Route exact path="/" component={Landing} />
-                
             </BrowserRouter>
         </StylesProvider>
     </div>;
