@@ -20,7 +20,7 @@ const mount = (element, { onNavigate, defaultHistory }) => {
 };
 
 if (process.env.NODE_ENV === 'development') {
-    const devRoot = document.querySelector('#_marketing-dev-root');
+    const devRoot = document.querySelector('#_auth-dev-root');
     if (devRoot) {
         mount(devRoot, { defaultHistory: createBrowserHistory() });
     }
