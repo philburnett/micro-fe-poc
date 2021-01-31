@@ -20,10 +20,6 @@ export default ({onSignIn, onSignOut}) => {
                     console.log('User signed in');
                     onSignIn();
                 },
-                onSignOut: () => {
-                    console.log('User signed out');
-                    onSignOut();
-                },
                 onSignUp: () => {
                     console.log("User has signed up");
                 }
