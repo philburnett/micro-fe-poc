@@ -2,7 +2,7 @@ import { mount } from 'auth/AuthApp';
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
-export default () => {
+export default ({onSignIn, onSignOut}) => {
     const ref = useRef(null);
     const history = useHistory();
 
@@ -15,6 +15,17 @@ export default () => {
                     if (history.location.pathname !== nextPathname) {
                         history.push(nextPathname);
                     }
+                },
+                onSignIn: () => {
+                    console.log('User signed in');
+                    onSignIn();
+                },
+                onSignOut: () => {
+                    console.log('User signed out');
+                    onSignOut();
+                },
+                onSignUp: () => {
+                    console.log("User has signed up");
                 }
             }
         );
